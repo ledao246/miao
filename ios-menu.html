@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ios-menu-less</title>
+  <style type="text/less">
+    ul{//所有的ul
+  padding: 0;
+  list-style: none;
+  xmargin: 0;
+      }
+ul.menu {
+  li {//所有的li都要相对定位且文字不折行
+    position: relative;
+    white-space: nowrap;
+  }
+  ul{//第二层及以内ul绝对定位及不显示
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+  }
+  li:hover{//所有li hover时要高亮
+    background-color: gold;
+    >ul{//此时子菜单ul显示
+    display:block;
+
+    }
+  }
+  >li{//最外层的li要横向排列
+    display: inline-block;
+    &>ul{
+      xposition: absolute;
+      left: 0;
+      top: 100%;
+    }
+  }
+
+
+}
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>creat folder
+          <ul>
+            <li>001
+              <ul>
+                <li>001</li>
+                <li>002</li>
+                <li>003</li>
+              </ul>
+            </li>
+            <li>002
+              <ul>
+                <li>001</li>
+                <li>002</li>
+                <li>003</li>
+              </ul>
+            </li>
+            <li>003
+              <ul>
+                <li>001</li>
+                <li>002</li>
+                <li>003</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>新建文件</li>
+      </ul>
+    </li>
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建文件</li>
+        <li>新建文件</li>
+      </ul>
+    </li>
+    <li>文件
+      <ul>
+        <li>新建文件</li>
+        <li>新建文件</li>
+        <li>新建文件</li>
+      </ul>
+    </li>
+  </ul>
+  <script src="G:\learn-git\miao\less.min.js"></script>
+</body>
+
+</html>

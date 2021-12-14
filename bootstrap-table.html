@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style type="text/less">
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: .5em;
+        text-align: left;
+      }
+
+      thead {
+        border-bottom: 2px solid #212529;
+      }
+
+      tr {
+        border-bottom: 1px solid #DEE2E6;
+      }
+
+      &.table-striped {
+        tbody tr:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+      }
+
+      &.table-hover {
+        tbody tr:hover {
+          background-color: #ECECEC;
+        }
+      }
+
+      &.table-sm {
+
+        th,
+        td {
+          padding: .25em;
+        }
+      }
+
+      &.table-bordered {
+
+        td,
+        th {
+          border: 1px solid #DEE2E6;
+        }
+      }
+
+      &.table-borderless {
+
+        thead,
+        tr {
+          border: none;
+        }
+      }
+
+      &.table-dark {
+        background-color: #212529;
+        color: white;
+
+        thead {
+          border-bottom-color: white;
+        }
+
+        tr {
+          border-bottom-color: #373B3E;
+        }
+
+        &.table-striped {
+          tbody tr:nth-child(odd) {
+            background-color: #2C3034;
+          }
+        }
+
+        &.table-hover {
+          tbody tr:hover {
+            background-color: #323539;
+          }
+        }
+
+        &.table-bordered {
+
+          td,
+          th {
+            border-color: #373B3E;
+          }
+        }
+      }
+    }
+
+    .table-responsive {
+      display: block;
+      overflow: auto;
+
+      tbody,
+      thead,
+      tfoot {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <table
+    class="table-responsive table xtable-striped table-hover xtable-sm table-bordered xtable-borderless xtable-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td><!-- 为什么rowspan不会把边框消掉 -->
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <script src="G:\learn-git\miao\less.min.js"></script>
+</body>
+
+</html>

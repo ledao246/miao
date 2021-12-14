@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>JS Bin</title>
+  <style>
+    label {
+      position: relative;
+      display: inline-block;
+      /* 为什么 */
+      width: 272px;
+      height: 156px;
+      box-sizing: border-box;
+      border: 4px solid #c7c7c7;
+      border-radius: 9999px;
+      transition: 0.5s;
+      /* 怎么变 */
+      padding: 7px;
+      /* 为什么 */
+      box-shadow: inset 0 0 0px 0px white;
+      cursor: pointer;
+    }
+
+    label::before {
+      content: '';
+
+      display: inline-block;
+      width: 134px;
+      height: 134px;
+      padding: 0;
+      border-radius: 9999px;
+      background-color: white;
+      box-shadow: 0px 5px 15px #999;
+
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      /* 怎么没影响 */
+      transition: .5s, padding .5s .1s;
+    }
+
+    input:checked+label::before {
+      left: 123px;
+      padding: 0 20px;
+      width: 94px;
+      transition: .5s, width .5s .1s;
+    }
+
+
+
+    input:checked+label {
+      border-color: #30f34a;
+      box-shadow: inset 0px 0px 0px 75px #30f34a;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" hidden id="check1">
+  <label for="check1">
+
+  </label>
+</body>
+
+</html>

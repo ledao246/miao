@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    label {
+      display: block;
+
+      width: 100px;
+      height: 100px;
+      border: 2px solid;
+
+      margin: auto;
+      overflow: hidden;
+      background-image: url(./Twitter-heart.png);
+      background-position: 0;
+
+    }
+
+    input {
+      display: none;
+    }
+
+
+    input:checked+label {
+      transition: 0.4666s steps(28);
+      background-position: -2800px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="Twitter-heart">
+  <label for="Twitter-heart"></label>
+
+</body>
+
+</html>
