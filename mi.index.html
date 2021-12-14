@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>are you ok小米商城</title>
+  <!--
+  <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="img/x-icon"> -->
+  <!-- <link rel="stylesheet" href="./css/topbar.css"> -->
+  <style type="text/less">
+
+    /* <!-- 黑色topbar --> */
+    /* 清除默认样式 */
+    *{
+      box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+      ul{
+    list-style: none;
+    padding: 0;
+    xfont-size: 0;
+    }
+      li {
+      padding: 0;
+    }
+    /* 顶部广告栏 */
+
+  .topbar1 {
+    height: 40px;
+    width: 1366px;
+    background-color: #333;
+    .sep {
+    width:3.22px;
+    font: 16px/40px "Microsoft YaHei";
+    color: #424242;
+    margin: auto 2px;
+    }
+    .container1{
+    height: 40px;
+    width: 1226px;
+    margin: 0;
+      padding-left: 70px;
+    }
+    .topbar-nav a{
+    font-size: 9px;
+    font-weight: border;
+    color: #b0b0b0;
+    text-decoration: none;
+    }
+    .topbar-nav a:hover{
+    color: #fff;
+    }
+    .topbar-cart {
+      width: 120px;
+      height: 40px;
+      background-color: grey;
+
+      float:right;
+      margin-left: 10px;
+      text-align: center;
+      margin-top: -40px;
+      position: relative;
+      span{
+        visibility:hidden;
+        color: black;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        top: 27px;
+        white-space: nowrap;
+      }
+    }
+    .topbar-cart a{
+      font-size: 9px;
+      font-weight: border;
+      color: #b0b0b0;
+      text-decoration: none;
+      xmargin: 20px auto;
+      line-height: 40px;
+    }
+    .topbar-cart:hover{
+
+      background-color: #fff;
+      a{
+        color: orange;
+      }
+      span{
+      visibility: visible;
+      }
+    }
+    .topbar-cart #t-cart{
+      width: 22px;
+      height: 22px;
+      position: relative;
+      top: 9px;
+    }
+    .user-info{
+      width: 200px;
+      height: 40px;
+      float: right;
+      margin-right: 80px;
+      margin-top: -40px;
+    }
+    .user-info a{
+      font-size: 9px;
+    font-weight: border;
+    color: #b0b0b0;
+    text-decoration: none;
+    }
+    .user-info a:hover{
+    color: #fff;
+    }
+    .topbar-download{
+      position: relative;
+      .appcode{
+        position: absolute;
+        left: -40px;
+        top:27px;
+        font-size:16px;
+        color: black;
+        text-align: center;
+        visibility: hidden;
+      }
+      &:hover{
+        .appcode{
+          visibility: visible;
+        }
+      }
+    }
+
+    }
+/* 头部logo导航和商品搜索部分 */
+nav{
+  height: 100px;
+  width:1366px;
+  margin: 10px 0;
+  line-height: 100px;
+  background-color: #fff;
+  position: relative;
+  > .milogo{
+    xbackground-image: url(https://s02.mifile.cn/assets/static/image/logo-mi2.png);
+    width: 56px;
+    height:56px;
+  }
+  ul.toufl{
+    xmargin-top: 0;
+    margin-left: 250px;
+    width: 800px;
+    font-size: 16px;
+    float: left;
+    &:hover ul{
+      visibility: hidden;
+    }
+    >li{
+      margin:5px;
+    }
+    li {
+      display: inline-block;
+
+      white-space: nowrap;
+      &:hover {
+        color: orange;
+        >ul{
+          visibility: visible;
+
+        }
+      }
+    }
+    ul{
+      visibility: hidden;
+      position: absolute;
+      width: 800px;
+      left: 0;
+      width: 1366px;
+      padding-left: 100px;
+    }
+  }
+  .search{
+    float: right;
+    height: 100px;
+    xline-height: 100px;
+    xvertical-align: center;
+    padding-top: 40px;
+    ul{
+      line-height: 25px;
+      font-size: 10px;
+      border: 1px orange solid;
+      width: 173px;
+      height: 170px;
+      padding-left: 15px;
+      visibility: hidden;
+    }
+    button{
+      width: 40px;
+      height: 40px;
+      border:1px;
+      float: right;
+      margin-top: 0px;
+      margin-right: 80px;
+      &:hover {
+        background-color: orange;
+      }
+    }
+    .searchbox{
+      width: 173px;
+      height: 40px;
+      float: right;
+      padding-left: 10px;
+      margin-top: 0px;
+      &:focus {
+        border-color: orange;
+
+        ~ul{
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+/* 轮播图和左侧商品导航 */
+  .zc-lb{
+    width: 1366px;
+    height: 460px;
+    .slider{
+      width: 1226px;
+      height: 460px;
+      margin: 0 auto;
+      position: relative;
+      input{
+        display: none;
+        &:nth-child(1):checked ~ .slides .slide:nth-child(1) img,
+        &:nth-child(2):checked ~ .slides .slide:nth-child(2) img,
+        &:nth-child(3):checked ~ .slides .slide:nth-child(3) img,
+        &:nth-child(4):checked ~ .slides .slide:nth-child(4) img{
+          opacity: 1;
+        }
+        &:nth-child(1):checked ~ .slides .slide:nth-child(1) label,
+        &:nth-child(2):checked ~ .slides .slide:nth-child(2) label,
+        &:nth-child(3):checked ~ .slides .slide:nth-child(3) label,
+        &:nth-child(4):checked ~ .slides .slide:nth-child(4) label{
+          index: 9;
+          display: block;
+        }
+        &:nth-child(1):checked ~ .indicators label:nth-child(1),
+        &:nth-child(2):checked ~ .indicators label:nth-child(2),
+        &:nth-child(3):checked ~ .indicators label:nth-child(3),
+        &:nth-child(4):checked ~ .indicators label:nth-child(4){
+          background-color: #666666;
+        }
+      }
+      .slides{
+        xwidth: 1226px;
+        height: 100%;
+        position: relative;
+
+
+
+        .slide{
+          height: 100%;
+          width: 100%;
+          position: relative;
+          img{
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              transition: 1s;
+          }
+          label{
+            width: 40px;
+            height: 70px;
+            background-image: url(https://  i1.mifile.cn/f/i/2014/cn/icon/  icon-slides.png);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &:nth-child(1){
+              left: 234px;
+              background-position: 81px;
+              &:hover{
+                background-position: 0;
+              }
+            }
+            &:nth-child(2){
+              right: 0;
+              background-position: 0;
+              &:hover{
+                background-position: 0;
+                }
+              }
+            }
+          }
+      }
+      .indicators{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        label{
+          float: left;
+          margin: 6px;
+          width: 10px;
+          height: 10px;
+          background-color: #353739;
+          border: 1px #7B868E solid;
+          border-radius: 999px;
+          &:hover{
+            background-color: #666666;
+          }
+        }
+      }
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- 黑色topbar -->
+  <div class="topbar1">
+    <div class="container1">
+      <div class="topbar-nav">
+
+        <a rel="nofollow" href="//www.mi.com/index.html">小米商城</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">MIUI</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">IoT</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">云服务</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">天星数科</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">有品</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">小爱开放平台</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">企业团购</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">资质证照</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">协议规则</a>
+        <span class="sep">|</span>
+        <a id="DownloadApp" class="topbar-download">
+          下载app
+          <span class="appcode">
+            <img src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1" alt="小米商城" width="120" height="120">
+            小米商城APP
+          </span>
+        </a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">智能生活</a>
+        <span class="sep">|</span>
+        <a rel="nofollow" href="" target="_blank">Select Location</a>
+
+      </div>
+      <div class="topbar-cart">
+        <img xsrc="//www.mi.com/buy/cart" alt="" id="t-cart">
+        <a href="" target="_self">购物车(0)
+          <span>
+            <img src="" alt="">购物车中还没有商品，赶紧选购吧！
+          </span>
+        </a>
+      </div>
+      <div class="user-info">
+        <a href="">登陆</a>
+        <span class="sep">|</span>
+        <a href="">注册</a>
+        <span class="sep">|</span>
+        <a href="">消息通知</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- /* 头部logo导航和商品搜索部分 */ -->
+  <nav>
+    <span class="milogo"></span>
+    <ul class="toufl">
+      <li>Xiaomi手机
+
+        <ul>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8cad77bda138fd94eadbc2ddfced7c56.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt>
+          </li>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/087c52d253d9301dff7743d6bf2d0330.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt>
+          </li>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/85e44ea2405ff8414148bbde7446b137.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt="">
+          </li>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/85e44ea2405ff8414148bbde7446b137.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt="">
+          </li>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/85e44ea2405ff8414148bbde7446b137.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt="">
+          </li>
+          <li>
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/85e44ea2405ff8414148bbde7446b137.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt="">
+          </li>
+        </ul>
+
+      </li>
+      <li>Redmi手机
+        <ul>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7e78629420a392da6fd3e34dae9fac5d.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25149bd95f33f9814aa4c4983c0d9b71.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a785b54d06c72ff63e64d0fa51ee02f5.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e3c5d99c28700a3c45ea65eebbea0a04.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+        </ul>
+      </li>
+      <li>电视
+        <ul>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7e78629420a392da6fd3e34dae9fac5d.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25149bd95f33f9814aa4c4983c0d9b71.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a785b54d06c72ff63e64d0fa51ee02f5.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+        </ul>
+      </li>
+      <li>笔记本
+        <ul>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/25149bd95f33f9814aa4c4983c0d9b71.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a785b54d06c72ff63e64d0fa51ee02f5.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+          <li><img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e3c5d99c28700a3c45ea65eebbea0a04.png?thumb=1&w=160&h=110&f=webp&q=90"
+              alt=""></li>
+        </ul>
+      </li>
+      <li>平板</li>
+      <li>家电</li>
+      <li>路由器</li>
+      <li>服务</li>
+      <li>社区</li>
+    </ul>
+    <div class="search">
+      <button></button>
+      <input type="text" class="searchbox" placeholder="xiaomi">
+      <ul>
+        <li>手机</li>
+        <li>电视</li>
+        <li>加湿器</li>
+        <li>耳机</li>
+        <li>平板</li>
+      </ul>
+    </div>
+  </nav>
+  <!-- 轮播图和左侧商品导航 -->
+  <div class="zc-lb">
+    <div class="slider">
+      <input type="radio" name="slider1" id="i1">
+      <input type="radio" name="slider1" id="i2">
+      <input type="radio" name="slider1" id="i3">
+      <input type="radio" name="slider1" id="i4">
+      <div class="slides">
+        <div class="slide">
+          <label for="i4"></label>
+          <label for="i2"></label>
+          <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ce57203f1618c7554d8a22f92e18446.jpg?w=2452&h=920"
+            alt="">
+        </div>
+        <div class="slide">
+          <label for="i1"></label>
+          <label for="i3"></label>
+          <img
+            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/58a3a8220d309b2700d9e262742445e7.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+            alt="">
+        </div>
+        <div class="slide">
+          <label for="i2"></label>
+          <label for="i4"></label>
+          <img
+            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/918820682e4a490221cfd92b24c14b86.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+            alt="">
+        </div>
+        <div class="slide">
+          <label for="i3"></label>
+          <label for="i1"></label>
+          <img
+            src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/61bef947ca0b863003b3e68336192a3a.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+            alt="">
+        </div>
+      </div>
+      <div class="indicators">
+        <label for="i1"></label>
+        <label for="i2"></label>
+        <label for="i3"></label>
+        <label for="i4"></label>
+      </div>
+    </div>
+  </div>
+
+  <script src="less.min.js"></script>
+</body>
+
+</html>

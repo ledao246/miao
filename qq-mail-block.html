@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    body {
+      margin: 0;
+      xpadding: 0;
+      xheight: 100%;
+      overflow: hidden;
+      /* 这条很重要，可以去掉试试，后期弄懂原因 */
+      font-size: 0;
+      /* 把body里的空隙去掉 */
+    }
+
+    header {
+      xwidth: auto;
+      height: 100px;
+      background-color: #87ceeb;
+      font-size: 16px;
+    }
+
+    aside {
+      width: 200px;
+      height: calc(100vh - 100px);
+      /* 块的高度，可以试试把这条去掉看看效果 */
+      background-color: #d2b48c;
+      xdisplay: inline-block;
+      overflow: auto;
+      /* 出现滚动条 */
+      font-size: 16px;
+      /* 使字体出现 */
+    }
+
+    main {
+      height: calc(100vh - 100px);
+      width: calc(100vw - 200px);
+      xdisplay: inline-block;
+      min-width: 300px;
+      background-color: yellow;
+      margin-left: 200px;
+      /* 这两句为了使块左移和上移 */
+      margin-top: calc(100px - 100vh);
+      overflow-y: auto;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <aside>
+    <ul>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+      <li ::marker=""></li>
+    </ul>
+  </aside>
+  <main>
+    /*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ // alert("hello"); // document.write("123???"); //
+    console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced //doman specitic language 领域特殊语言 //block 块
+    marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局 每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框
+    行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐/*alert("hello");在浏览器窗口弹出 document.write("123???"); 在body中输出*/ //
+    alert("hello"); // document.write("123???"); // console.log("12321"); //字体分为 衬线serif 非衬线字体 sans-serif和等宽字体monospaced
+    //doman specitic language 领域特殊语言 //block 块 marg，不占位 visibility：hidden 隐藏占位 overflow: hidden 超出部分隐藏 行内元素的边框不会影响内容布局
+    每个文本字体都有em框包裹，em框大小由字体大小决定，多个em框连接形成文本框 行内元素的行高只能靠更换字体或者改变字体大小改变 行内框的高度为light高度 vertical-align:调节行内文本的上下位置
+    当行内块元素触发bfc[overflow-hidden]时，以marginbox的底边为基线对齐
+  </main>
+</body>
+
+</html>
