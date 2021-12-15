@@ -236,7 +236,7 @@
 <script type="javascript" id="ch0104/10">
       var x = Number(prompt('x'));
       var y = Number(prompt('y'));
-      if (x < 10 || y < 10) {
+      if (x < 60 || y < 60) {
         console.log(1);
       } else {
         console.log(0);
@@ -245,9 +245,9 @@
 <script type="javascript" id="ch0104/11">
   var x = Number(prompt('x'));
   if (x ==1 || x == 3 || x == 5) {
-      console.log(0);
+      console.log('NO');
     } else {
-      console.log(1);
+      console.log('YES');
     }
 </script>
 <script type="javascript" id="ch0104/12">
@@ -274,7 +274,7 @@
 </script>
 <script type="javascript" id="ch0104/14">
   var x = Number(prompt('x'));
-  var isjiaji = Number(prompt('jiaji?'));
+  var isjiaji = prompt('jiaji?');
   var sum = 0;
   if (isjiaji == 'y'){
     sum = sum + 5;
@@ -313,7 +313,7 @@
       console.log('no');
     }
 </script>
-<script xtype="javascript" id="ch0104/17">
+<script type="javascript" id="ch0104/17">
   var x = Number(prompt('x'));
   if (x % 4 == 0 && x % 100 != 0 || x % 400 == 0) {
     console.log('Y');
@@ -333,7 +333,7 @@
 <script type="javascript" id="ch0104/19">
         var x = Number(prompt('x'));
         var y = Number(prompt('y'));
-        var a = Number(prompt('a'));
+          var a = (prompt('a'));
         if(a == '+'){
           console.log(x + y);
         }else if(a == '-'){
@@ -350,25 +350,26 @@
           console.log('Invalid operator!');
         }
 </script>
-<script xtype="javascript" id="ch0104/20">
+<script type="javascript" id="ch0104/20">
+    //debugger;
   var a = Number(prompt('a'));
   var b = Number(prompt('b'));
   var c = Number(prompt('c'));
   var delta = b * b - 4 * a * c;
   var sqrtDelta, x1, x2, x, i1, i2;
 
-    x = (-b) / 2 / a;
+          x = ((-b) / 2 / a).toFixed(5);
     if (delta < 0) {
-      sqrtDelta = Math.sqrt(-delta);
-      i1 = String(sqrtDelta) + 'i';
-      i2 = String(-sqrtDelta) + 'i';
+      sqrtDelta = (Math.sqrt(-delta) / 2 / a).toFixed(5);
+      i1 = '+' + String(sqrtDelta) + 'i';
+      i2 = '-' + String(sqrtDelta) + 'i';
       console.log(String(x) + i1);
       console.log(String(x) + i2);
     }
     else {
       if (delta == 0) {
 
-      console.log(x.toFixed(5));
+        console.log(x);
     }
     else {
       sqrtDelta = Math.sqrt(delta);
