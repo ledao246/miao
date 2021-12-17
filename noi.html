@@ -391,12 +391,13 @@
 
 <script type="javascript" id="ch0105/01">
   var n = Number(prompt('n'));
-  var sum = 0, x;
+  var sum = 0, x, average;
   for (var i = 0; i < n; i++) {
     x = Number(prompt('age'));
     sum = sum + x;
   }
-  console.log(sum.toFixed(2));
+  average = sum / n;
+  console.log(average.toFixed(2));
 </script>
 <script type="javascript" id="ch0105/02">
   var month, year = 0, average;
@@ -414,7 +415,8 @@
       x = Number(prompt('sample'));
       sum = sum + x;
     }
-    console.log(sum.toFixed(4));
+    var average = sum / n;
+    console.log(average.toFixed(4));
 </script>
 <script type="javascript" id="ch0105/04">
   var n = Number(prompt('n'));
@@ -423,7 +425,8 @@
     x = Number(prompt('sample'));
     sum = sum + x;
   }
-  console.log(sum,sum.toFixed(5));
+  var average = sum / n;
+  console.log(sum,average.toFixed(5));
 </script>
 <script type="javascript" id="ch0105/05">
   var n = Number(prompt('n'));
@@ -562,24 +565,7 @@
   }else {
     console.log('Impossible');
   }
-  <!-- var n = Number(prompt('n'));
-  var a = Number(prompt('a'));
-  var t = 1 + a / 100;
-  var sum = 200 * t, money = n, i = 2;
-  while(money < sum){
-    debugger;
-    sum = sum * t;
-    i++;
-    money = money + n;
-    if(i > 20){
-    break;
-  }
-  }
-  if(i <= 20){
-    console.log(i);
-  }else{
-    console.log('Impossible');
-  } -->
+
 </script>
 <script type="javascript" id="ch0105/17">
   var k = Number(prompt());
@@ -624,12 +610,13 @@
 <script type="javascript" id="ch0105/20">
   var a = Number(prompt('a'));
   var sum = a, i = 0;
+  a = a / 2;
   for (i = 0; i < 9; i++) {
-    a = a / 2;
     sum = sum + 2 * a;
+    a = a / 2;
   }
-  console.log(sum);
-  console.log(a / 2);
+  console.log(sum.toFixed(4));
+  console.log(a.toFixed(7));
 
 </script>
 <script type="javascript" id="ch0105/21">
