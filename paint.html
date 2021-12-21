@@ -58,8 +58,169 @@
    */
 </script>
 <script>
-  // 不可更改上面的代码
-  // 你的代码写在这里
-  // YOUR CODE GOES BELOW
+
+  //  * 在 坐标(42, 42) 画出一个点
+  dot(42, 42, color = 'rgb(255,0,0)');
+  // * 画一条实线
+  for (var i = 10; i < 50; i++) {
+    dot(i, 5);
+  }
+  // * 画一条一个实点一个空点的虚线
+  for (var i = 10; i < 50; i = i + 2) {
+    dot(i, 10);
+  }
+  // * 画一条两个实点两个空点的虚线
+  for (var i = 10; i < 50; i = i + 4) {
+    dot(i, 15);
+    dot(i + 1, 15);
+  }
+  // * 画一条三个实点两个空点的虚线
+  for (var i = 10; i < 50; i = i + 5) {
+    dot(i, 20);
+    dot(i + 1, 20);
+    dot(i + 2, 20);
+  }
+  // * 画一条45度的斜线
+  for (var i = 10; i < 50; i++) {
+    var j = i + 10;
+    dot(i, j);
+  }
+  // * 画一条30度的斜线（与x轴或y轴的夹角呈30度）
+  for (var i = 10; i < 50; i++) {
+    var j = i / Math.round(Math.sqrt(3)) + 30;
+    dot(i, j);
+  }
+  // * 画一条跨越画布左上角和右下角的对角线
+  for (var i = 0; i < 500; i++) {
+    var j = Math.round(0.8 * i);
+    dot(i, j);
+  }
 </script>
+      <script type='javascript'>
+        // * 画一个空心矩形
+        for (var i = 10; i <= 50; i++) {
+          var j = 80;
+          dot(i, j);
+          j = 120;
+          dot(i, j);
+          for (j = 81; j < 120; j++) {
+            if (i == 10 || i == 50) {
+              dot(i, j);
+            }
+          }
+        }
+
+      </script>
+<script type='javascript'>
+  // * 画一个实心矩形
+
+  for (var i = 10; i <= 50; i++) {
+    for (var j = 130; j <= 170; j++) {
+      dot(i, j);
+    }
+  }
+
+</script>
+<script type='javascript'>
+  // * 画两个个空心的圆，居中：x=250,y=200
+  // * 一个半径为50像素
+  for (var x = 200; x <= 300; x++) {
+    var y = 200 - Math.round(Math.sqrt(2500 - (x - 250) * (x - 250)));
+    dot(x, y, color = 'red');
+    var y = 200 + Math.round(Math.sqrt(2500 - (x - 250) * (x - 250)));
+    dot(x, y, color = 'red');
+  }
+</script>
+<script type='javascript'>
+  // * 一个半径为200像素
+  for (var x = 50; x <= 450; x++) {
+    var y = 200 - Math.round(Math.sqrt(40000 - (x - 250) * (x - 250)));
+    dot(x, y);
+    var y = 200 + Math.round(Math.sqrt(40000 - (x - 250) * (x - 250)));
+    dot(x, y);
+  }
+</script>
+<script type='javascript'>
+  // * 画一个实心的圆，半径至少为100像素
+  for (var i = 1; i <= 100; i++) {
+    for (var x = 250 - i; x <= 250 + i; x++) {
+      var y = 200 - Math.round(Math.sqrt(i * i - (x - 250) * (x - 250)));
+      dot(x, y);
+      var y = 200 + Math.round(Math.sqrt(i * i - (x - 250) * (x - 250)));
+      dot(x, y);
+    }
+  }
+</script>
+<script xtype='javascript'>
+  // * 画一个【大小合适】的sin(x)的图像
+  for (var x = 100; x < 200; x += 0.4) {
+    var y = 20 - 10 * Math.sin(x / 4);
+    dot(x, y);
+  }
+</script>
+<script xtype='javascript'>
+  // * 画出rgb色彩空间的某一面（尺寸要大于100x100）
+  for (var i = 210; i <= 250; i++) {
+    for (var j = 30; j <= 70; j++) {
+      let rgb = 'rgb(' + i + ',' + j * 2 + ',' + j * 3 + ')';
+      dot(i, j, rgb);//为什么rgb要这么写
+    }
+  }
+</script>
+<script type='javascript'>
+  //   如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2, 0, 0, 2)或(1, 0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
+  //     可以考虑如下几种矩阵：
+  //2 0
+  //   0 2
+  for (var i = 210; i <= 250; i++) {
+    for (var j = 30; j <= 70; j++) {
+      dot(2 * i, 2 * j, 'rgb((i-200) * 4, j * 2, j * 3)');
+    }
+  }
+</script>
+<script type='javascript'>
+  //        ----
+  // 1  0.2    // 0  1
+  for (var i = 210; i <= 250; i++) {
+    for (var j = 30; j <= 70; j++) {
+      dot(i + j / 5, j, color = 'rgb((i-200) * 4, j * 2, j * 3)');
+    }
+  }
+</script>
+<script type='javascript'>
+  //        ------
+  // / 0.5    -0.87
+  //0.87  0.5
+  for (var i = 210; i <= 250; i++) {
+    for (var j = 30; j <= 70; j++) {
+      let rgb = 'rgb(' + i + ',' + j * 2 + ',' + j * 3 + ')';
+      dot(i / 2 - 0.87 * j, 0.87 * i + j / 2, rgb);
+    }
+  }
+</script>
+<script type='javascript'>
+  //实心圆
+  for (let i = 0; i < 360; i++) {
+    //for (let j = 0; j <= 100; j += 1) {
+    for (let k = 0; k <= 100; k += 1) {
+      let x = 400 + k * Math.cos(i * 3.14 / 180) //
+      let y = 100 + k * Math.sin(i * 3.14 / 180)
+      dot(x, y)
+    }
+    // }
+  }
+</script>
+<script type='javascript'>
+  //圆圈
+  for (let i = 0; i < 360; i++) {
+    // for(let j = 0;j <= 100;j+=1){
+    //for (let k = 0; k <= 100; k += 1) {
+    let x = 400 + 100 * Math.cos(i * 3.14 / 180) //
+    let y = 100 + 100 * Math.sin(i * 3.14 / 180)
+    dot(x, y)
+    // }
+    // }
+  }
+</script>
+
 </html>

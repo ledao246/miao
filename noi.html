@@ -1,3 +1,185 @@
+<script type="javascript" id="narcissistic">
+var n = Number(prompt('n'));
+var sum = 0, t = n, d;
+while(n > 0) {
+d = n % 10;
+sum = sum + d * d* d;
+n = (n - d) / 10;
+}
+if (sum == t) {
+  console.log('YES');
+} else {
+  console.log('NO');
+}
+</script>
+<script type="javascript" id="narcissistics">
+for ( var i = 0; i < 10000; i++) {
+  var sum = 0, n = i, d;
+  while (n > 0) {
+    d = n % 10;
+    sum = sum + d * d * d;
+    n = (n - d) / 10;
+  }
+  if (sum == i) {
+    console.log(i);
+  }
+}
+</script>
+<script type="javascript" id="palindrom">
+  var n = Number(prompt('n'));
+  var sum = 0, t = n, d;
+  while (n > 0) {
+    d = n % 10;
+    sum = sum * 10 + d ;
+    n = (n - d) / 10;
+  }
+  if (sum == t) {
+    console.log('YES');
+  }else {
+  console.log('NO');
+}
+</script>
+<script type="javascript" id="weekday">
+function judgeYear(year){
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function monthDays(year, month){
+  if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+    return 31;
+  } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+    return 30;
+  } else if (judgeYear(year)) {
+    return 29;
+  } else {
+    return 28;
+  }
+}
+function yearDays(year) {
+  if (judgeYear(year)) {
+    return 366;
+  } else {
+    return 365;
+  }
+}
+function weekday(year, month) {
+  var weekday = 1;
+  for (var i = 1800; i < year; i++) {
+    weekday = (weekday + yearDays(year)) % 7;
+  }
+  for (var j = 1; j < month; j++) {
+    weekday = (weekday + monthDays(month)) % 7;
+  }
+  console.log(weekday);
+}
+var y = Number(prompt('y'));
+  var m = Number(prompt('m'));
+  weekday(y, m);
+</script>
+<script type="javascript" id="complete-number">
+  var n = Number(prompt('n'));
+  var sum = 0;
+  for (var i = 1; i < n; i++) {
+    if (n % i ==0) {
+      sum = sum + i;
+    }
+  }
+  if ( sum == n) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+</script>
+<script type="javascript" id="complete-numbers">
+
+  for (var j = 2; j < 1000; j++) {
+    var sum = 0, n = j;
+    for (var i = 1; i <= n / 2; i++) {
+      if (n % i == 0) {
+        sum = sum + i;
+      }
+    }
+    if (sum == n) {
+      console.log(n);
+    }
+  }
+</script>
+<script type="javascript" id="prime">
+  var isprime = 1;
+  var n = Number(prompt('n'));
+  if (n <= 3) {
+    if (n < 1) {
+      isprime = 0;
+    }
+  } else {
+    if (n % 6 != 1 && n % 6 != 5) {
+      isprime = 0;
+    } else {
+      for (var i = 5; i * i <= n; i++) {
+        if (n % i == 0 || n % (i + 2) == 0) {
+
+          isprime = 0;
+        }
+      }
+    }
+  }
+  if (isprime) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+</script>
+<script type="javascript" id="primes">
+  function isPrime(n) {
+    if (n <= 3) {
+        if (n >= 1) {
+          return ture;
+        }
+      } else {
+        if (n % 6 != 1 && n % 6 != 5) {
+          return false;
+        } else {
+          for (var i = 5; i * i <= n; i++) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+              return false;
+            }
+          }
+          return true;
+        }
+      }
+  }
+  for (var i = 1; i < 100; i++) {
+    if (isPrime(i)) {
+      console.log(i);
+    }
+  }
+</script>
+<script type="javascript" id="itoa">
+var n = Number(prompt('n'));
+var str = '', d;
+while (n > 0) {
+  d = n % 10;
+  n = (n - d) / 10;
+  str = d + str;
+}
+console.log(str);
+</script>
+<scriptxtype="javascript" id="lcf&lcm">
+  function mcd(a,b){
+  if (a < b) { return lcf(b,a); } if (b==0) { return a; } else { return lcf(b, a % b); } } var n=Number(prompt('n'));
+    var m=Number(prompt('m')); var mul=n * m, lcp, lcm; lcf=mcd(a, b); lcm=mul / lcp; console.log(lcp,lcm); </script>
+    <script type="javascript" id="sqrt">
+var n = Number(prompt('n'));
+for (var i = 1; i * i < n; i++){}
+for (var j = i + 1; j * j >= n; j -= 0.001) {
+
+}
+console.log(j.toFixed(3));
+</script>
+
 <script type="hg" id="ch0103/01">
 
   var a = Number(prompt('a'))
