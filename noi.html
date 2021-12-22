@@ -13,7 +13,7 @@ if (sum == t) {
 }
 </script>
 <script type="javascript" id="narcissistics">
-for ( var i = 0; i < 10000; i++) {
+for ( var i = 2; i < 10000; i++) {
   var sum = 0, n = i, d;
   while (n > 0) {
     d = n % 10;
@@ -67,11 +67,11 @@ function yearDays(year) {
 }
 function weekday(year, month) {
   var weekday = 1;
-  for (var i = 1800; i < year; i++) {
+  for (var i = 1; i < year; i++) {
     weekday = (weekday + yearDays(year)) % 7;
   }
   for (var j = 1; j < month; j++) {
-    weekday = (weekday + monthDays(month)) % 7;
+    weekday = (weekday + monthDays(year,month)) % 7;
   }
   console.log(weekday);
 }
@@ -83,7 +83,7 @@ var y = Number(prompt('y'));
   var n = Number(prompt('n'));
   var sum = 0;
   for (var i = 1; i < n; i++) {
-    if (n % i ==0) {
+    if (n % i == 0) {
       sum = sum + i;
     }
   }
@@ -111,7 +111,7 @@ var y = Number(prompt('y'));
   var isprime = 1;
   var n = Number(prompt('n'));
   if (n <= 3) {
-    if (n < 1) {
+    if (n <= 1) {
       isprime = 0;
     }
   } else {
@@ -136,7 +136,7 @@ var y = Number(prompt('y'));
   function isPrime(n) {
     if (n <= 3) {
         if (n >= 1) {
-          return ture;
+          return true;
         }
       } else {
         if (n % 6 != 1 && n % 6 != 5) {
@@ -157,7 +157,7 @@ var y = Number(prompt('y'));
     }
   }
 </script>
-<script type="javascript" id="itoa">
+<script type="javascript" id="itob">
 var n = Number(prompt('n'));
 var str = '', d;
 while (n > 0) {
