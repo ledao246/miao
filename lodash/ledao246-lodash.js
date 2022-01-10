@@ -1,4 +1,4 @@
-var ledao642 = {
+var ledao246 = {
   chunk: function (array, size) {
 
   }
