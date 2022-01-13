@@ -173,16 +173,10 @@ var ledao246 = function () {
     return -1;
   }
   /**
-   *
-   *
-   */
-  return {
-    countBy: countBy,
+   *countBy: countBy,
     groupBy: groupBy,
     keyBy: keyBy,
-    findIndex: findIndex,
-    findLastIndex: findLastIndex,
-    forEach: forEach,
+   *forEach: forEach,
     shuffle: shuffle,
     every: every,
     filter: filter,
@@ -193,15 +187,6 @@ var ledao246 = function () {
     reduceRight: reduceRight,
     reject: reject,
     some: some,
-    chunk: chunk,
-    compact: compact,
-    drop: drop,
-    dropRight: dropRight,
-    fill: fill,
-    flatten: flatten,
-    fromPairs: fromPairs,
-    head: head,
-    indexOf: indexOf,
     initial: initial,
     join: join,
     last: last,
@@ -220,9 +205,6 @@ var ledao246 = function () {
     sumBy: sumBy,
     repeat: repeat,
     range: range,
-    difference: difference,
-    flattenDeep: flattenDeep,
-    flattenDepth: flattenDepth,
     concat: concat,
     toArray: toArray,
     nth: nth,
@@ -234,6 +216,32 @@ var ledao246 = function () {
     take: take,
     takeRight: takeRight,
     mapValues: mapValues,
+
+
+   */
+
+
+
+
+  return {
+
+    findIndex: findIndex,
+    findLastIndex: findLastIndex,
+
+    chunk: chunk,
+    compact: compact,
+    drop: drop,
+    dropRight: dropRight,
+    fill: fill,
+    flatten: flatten,
+    fromPairs: fromPairs,
+    head: head,
+    indexOf: indexOf,
+
+    difference: difference,
+    flattenDeep: flattenDeep,
+    flattenDepth: flattenDepth,
+
 
   }
 }()
