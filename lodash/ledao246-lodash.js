@@ -172,6 +172,78 @@ var ledao246 = function () {
     }
     return -1;
   }
+  function initial(array) {
+    return array.slice(0, array.length - 1);
+  }
+  function intersection(...arrays) {
+    let result = [];
+    let comp = arrays[0];
+    for (let i = 0; i < comp.length; i++) {
+      let isFind = true;
+      for (let j = 1; j < arrays.length; j++) {
+        if (!arrays[j].includes(comp[i])) {
+          isFind = false;
+          break;
+        }
+      }
+      if (isFind) {
+        result.push(comp[i]);
+      }
+    }
+    return result;
+  }
+  function join(array, sep = ',') {
+    if (array.length == 0) { return ''; }
+    let result = String(array[0]);
+    for (let i = 1; i < array.length; i++) {
+      result = result + sep + array[i];
+    }
+    return result;
+  }
+  function last(array) {
+    return array[array.length - 1];
+  }
+  function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    for (i = fromIndex; i >= 0; i--) {
+      if (array[i] == value) {
+        return i;
+      }
+    }
+  }
+  function pull(array, ...values) {
+    let len = array.length;
+    for (let i = len - 1; i >= 0; i--) {
+      if (values.includes(array[i])) {
+        swap(array, i, array.length - 1);
+        array.pop();
+      }
+    }
+    return array;
+  }
+  function pullAll(array, values) {
+    let len = array.length;
+    for (let i = len - 1; i >= 0; i--) {
+      if (values.includes(array[i])) {
+        swap(array, i, array.length - 1);
+        array.pop();
+      }
+    }
+    return array;
+  }
+  function swap(array, i, j) {
+    let t = array[i];
+    array[i] = array[j];
+    array[j] = t;
+    return array;
+  }
+  function reverse(array) {
+    let mid = Math.floor(array.length / 2);
+    end = array.length - 1;
+    for (let i = 0; i < mid; i++) {
+      swap(array, i, end - i);
+    }
+    return array;
+  }
   /**
    *countBy: countBy,
     groupBy: groupBy,
@@ -188,10 +260,8 @@ var ledao246 = function () {
     reject: reject,
     some: some,
     initial: initial,
-    join: join,
-    last: last,
-    lastIndexOf: lastIndexOf,
-    reverse: reverse,
+
+
     uniq: uniq,
     uniqBy: uniqBy,
     without: without,
@@ -208,7 +278,7 @@ var ledao246 = function () {
     concat: concat,
     toArray: toArray,
     nth: nth,
-    intersection: intersection,
+
     pull: pull,
     pullAll: pullAll,
     remove: remove,
@@ -224,7 +294,14 @@ var ledao246 = function () {
 
 
   return {
-
+    reverse: reverse,
+    pull: pull,
+    pullAll: pullAll,
+    join: join,
+    last: last,
+    lastIndexOf: lastIndexOf,
+    initial: initial,
+    intersection: intersection,
     findIndex: findIndex,
     findLastIndex: findLastIndex,
 
