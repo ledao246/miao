@@ -206,9 +206,10 @@ var ledao246 = function () {
   function lastIndexOf(array, value, fromIndex = array.length - 1) {
     for (i = fromIndex; i >= 0; i--) {
       if (array[i] == value) {
-        return i;
+        break;
       }
     }
+    return i;
   }
   function pull(array, ...values) {
     let len = array.length;
@@ -244,6 +245,27 @@ var ledao246 = function () {
     }
     return array;
   }
+  function remove(array, predicate = _.identity) {
+    let result = [];
+    let len = array.length;
+    for (let i = 0; i < array.length; i++) {
+      if (predicate(array[i], i, array)) {
+        swap(array, i, array.length - 1);
+        result.push(array.pop());
+        i--;
+      }
+    }
+    return result;
+  }
+  function sortedIndex(array, value) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] > value) {
+        break;
+      }
+    }
+    return i;
+  }
+
   /**
    *countBy: countBy,
     groupBy: groupBy,
@@ -294,6 +316,8 @@ var ledao246 = function () {
 
 
   return {
+    sortedIndex: sortedIndex,
+    remove: remove,
     reverse: reverse,
     pull: pull,
     pullAll: pullAll,
